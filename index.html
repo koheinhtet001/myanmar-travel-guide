@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Myanmar Travel Guide</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        nav {
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        input {
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            transform: scale(1.05);
+        }
+
+        .places {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 2px 10px gray;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode .card {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode h1 {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Myanmar Travel</h2>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Places</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </nav>
+
+    <h1>Welcome to Myanmar Travel Guide</h1>
+
+    <p>Discover beautiful places across Myanmar.</p>
+
+    <input type="text" id="searchBox" placeholder="Search places...">
+
+    <button onclick="searchPlace()">Search</button>
+
+    <button onclick="showAll()">Show All Places</button>
+
+    <div class="places">
+
+        <div class="card">
+            <img src="images/inle.jpg" alt="Inle Lake">
+            <h2>Inle Lake</h2>
+            <p>Beautiful lake in Shan State.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/Bagan.jpg" alt="Bagan">
+            <h2>Bagan</h2>
+            <p>Ancient city with thousands of pagodas.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/Ngapali.jpg" alt="Ngapali">
+            <h2>Ngapali Beach</h2>
+            <p>One of Myanmar's most famous beaches.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/Shwedagon.jpg" alt="Shwedagon">
+            <h2>Shwedagon Pagoda</h2>
+            <p>The most famous pagoda in Myanmar.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/uppatasanti Pagoda.jpg" alt="Uppatasanti">
+            <h2>Uppatasanti Pagoda</h2>
+            <p>A beautiful landmark in Naypyidaw.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/PUTAO.jpg" alt="Putao">
+            <h2>PUTAO</h2>
+            <p>A beautiful mountain destination in Kachin State.</p>
+        </div>
+
+    </div>
+
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name"><br><br>
+
+        <input type="email" placeholder="Your Email"><br><br>
+
+        <textarea placeholder="Your Message" rows="5" cols="40"></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        <p>© 2026 Myanmar Travel Guide | Created by Hein Htet Aung</p>
+    </footer>
+
+    <script>
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function searchPlace() {
+
+            let input =
+                document.getElementById("searchBox").value.toLowerCase();
+
+            let cards =
+                document.getElementsByClassName("card");
+
+            for (let i = 0; i < cards.length; i++) {
+
+                let title =
+                    cards[i].getElementsByTagName("h2")[0];
+
+                let text =
+                    title.innerText.toLowerCase();
+
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        function showAll() {
+
+            let cards =
+                document.getElementsByClassName("card");
+
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "";
+            }
+
+            document.getElementById("searchBox").value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
