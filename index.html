@@ -5,7 +5,6 @@
     <title>Myanmar Travel Guide</title>
 
     <style>
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -40,17 +39,14 @@
 
         h1 {
             color: darkblue;
-        }
-
-        input,
-        textarea {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid gray;
+            margin-top: 20px;
         }
 
         input {
+            padding: 10px;
             width: 250px;
+            border-radius: 5px;
+            border: 1px solid gray;
         }
 
         button {
@@ -60,12 +56,10 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
         }
 
         button:hover {
             background-color: darkblue;
-            transform: scale(1.05);
         }
 
         .places {
@@ -80,11 +74,6 @@
             padding: 15px;
             border-radius: 15px;
             box-shadow: 0px 2px 10px gray;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
         }
 
         .card img {
@@ -92,6 +81,10 @@
             height: 220px;
             object-fit: cover;
             border-radius: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
         }
 
         footer {
@@ -114,7 +107,6 @@
         .dark-mode h1 {
             color: white;
         }
-
     </style>
 </head>
 
@@ -140,34 +132,34 @@
 
     <button onclick="searchPlace()">Search</button>
 
-    <button onclick="showAll()">Show All Places</button>
+    <button onclick="showAll()">Show All</button>
 
     <div class="places">
 
         <div class="card">
-    <a href="inle.html">
-        <img src="inle.jpg" alt="Inle Lake">
-    </a>
-
-    <h2>Inle Lake</h2>
-    <p>Beautiful lake in Shan State.</p>
-</div>
-       <div class="card">
-    <a href="bagan.html">
-        <img src="Bagan.jpg" alt="Bagan">
-    </a>
-    <h2>Bagan</h2>
-    <p>Ancient city with thousands of pagodas.</p>
-</div>
+            <a href="inle.html">
+                <img src="inle.jpg" alt="Inle Lake">
+            </a>
+            <h2>Inle Lake</h2>
+            <p>Beautiful lake in Shan State.</p>
+        </div>
 
         <div class="card">
-    <a href="ngapali.html">
-        <img src="Ngapali.jpg" alt="Ngapali Beach">
-    </a>
+            <a href="bagan.html">
+                <img src="Bagan.jpg" alt="Bagan">
+            </a>
+            <h2>Bagan</h2>
+            <p>Ancient city with thousands of pagodas.</p>
+        </div>
 
-    <h2>Ngapali Beach</h2>
-    <p>One of Myanmar's most famous beaches.</p>
-</div>
+        <div class="card">
+            <a href="ngapali.html">
+                <img src="Ngapali.jpg" alt="Ngapali Beach">
+            </a>
+            <h2>Ngapali Beach</h2>
+            <p>One of Myanmar's most famous beaches.</p>
+        </div>
+
         <div class="card">
             <img src="Shwedagon.jpg" alt="Shwedagon">
             <h2>Shwedagon Pagoda</h2>
@@ -182,23 +174,11 @@
 
         <div class="card">
             <img src="PUTAO.jpg" alt="Putao">
-            <h2>PUTAO</h2>
+            <h2>Putao</h2>
             <p>A beautiful mountain destination in Kachin State.</p>
         </div>
 
     </div>
-
-    <h2>Contact Us</h2>
-
-    <form>
-        <input type="text" placeholder="Your Name"><br><br>
-
-        <input type="email" placeholder="Your Email"><br><br>
-
-        <textarea placeholder="Your Message" rows="5" cols="40"></textarea><br><br>
-
-        <button type="submit">Send Message</button>
-    </form>
 
     <footer>
         <p>© 2026 Myanmar Travel Guide | Created by Hein Htet Aung</p>
@@ -250,4 +230,4 @@
 
 </body>
 
-</html> 
+</html>
