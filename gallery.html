@@ -6,14 +6,27 @@
 
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             background-color: lightblue;
             text-align: center;
-            margin: 0;
+        }
+
+        nav {
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
         }
 
         h1 {
             color: darkblue;
+            margin-top: 20px;
         }
 
         .gallery {
@@ -28,6 +41,7 @@
             height: 250px;
             object-fit: cover;
             border-radius: 10px;
+            box-shadow: 0px 2px 10px gray;
             transition: 0.3s;
         }
 
@@ -35,34 +49,43 @@
             transform: scale(1.05);
         }
 
-        .btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 20px;
-            background: blue;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="index.html">⬅ Back to Home</a>
+</nav>
+
 <h1>Myanmar Travel Gallery</h1>
 
 <div class="gallery">
-    <img src="inle.jpg" alt="Inle Lake">
-    <img src="Bagan.jpg" alt="Bagan">
-    <img src="Ngapali.jpg" alt="Ngapali">
-    <img src="Shwedagon.jpg" alt="Shwedagon">
-    <img src="uppatasanti Pagoda.jpg" alt="Uppatasanti">
-    <img src="PUTAO.jpg" alt="Putao">
-    <img src="kanbawzathadi.jpg" alt="Kanbawzathadi Palace">
-    <img src="TaungWine.jpg" alt="Taung Wine Mountain">
-</div>
 
-<a class="btn" href="index.html">⬅ Back Home</a>
+    <img src="inle.jpg" alt="Inle Lake">
+
+    <img src="Bagan.jpg" alt="Bagan">
+
+    <img src="Ngapali.jpg" alt="Ngapali Beach">
+
+    <img src="Shwedagon.jpg" alt="Shwedagon Pagoda">
+
+    <img src="uppatasanti Pagoda.jpg" alt="Uppatasanti Pagoda">
+
+    <img src="PUTAO.jpg" alt="Putao">
+
+    <img src="Kanbawzathadi.jpg" alt="Kanbawzathadi Palace">
+
+    <img src="TaungWine.jpg" alt="Taung Wine Mountain">
+
+    <img src="HaipaWaterfall.jpg" alt="Haipa Waterfall">
+
+</div>
 
 </body>
 </html>
