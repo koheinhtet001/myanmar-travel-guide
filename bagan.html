@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bagan</title>
+    <title>Bagan - Myanmar Travel Guide</title>
 
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
-            text-align:center;
             background-color: lightblue;
+            text-align: center;
+            margin: 0;
         }
 
-        img{
-            width:80%;
-            max-width:700px;
-            border-radius:10px;
+        nav {
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
         }
 
-        .btn{
-            padding:10px 20px;
-            background-color:blue;
-            color:white;
-            text-decoration:none;
-            border-radius:5px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0px 2px 10px gray;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Bagan</h1>
+    <nav>
+        <a href="index.html">⬅ Back to Home</a>
+    </nav>
 
-    <img src="Bagan.jpg" alt="Bagan">
+    <div class="container">
 
-    <p>
-        Bagan is one of Myanmar's most famous historical sites,
-        known for its thousands of ancient temples and pagodas.
-    </p>
-<h2>Location Map</h2>
+        <h1>Bagan</h1>
 
-<iframe
-    src="https://maps.google.com/maps?q=Bagan%20Myanmar&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    width="80%"
-    height="400"
-    style="border:0; border-radius:10px;"
-    allowfullscreen=""
-    loading="lazy">
-</iframe>
-    <br>
+        <img src="Bagan.jpg" alt="Bagan">
 
-    <a class="btn"
-       href="https://maps.google.com/?q=Bagan+Myanmar"
-       target="_blank">
-       📍 View on Google Maps
-    </a>
+        <p>
+            Bagan is one of Myanmar's most famous historical cities.
+            It is home to thousands of ancient temples and pagodas,
+            making it one of the world's greatest archaeological sites.
+        </p>
 
-    <br><br>
+        <a class="btn"
+           href="https://maps.google.com/?q=Bagan+Myanmar"
+           target="_blank">
+           📍 View on Google Maps
+        </a>
 
-    <a class="btn" href="index.html">
-        ⬅ Back Home
-    </a>
+    </div>
 
 </body>
 </html>
